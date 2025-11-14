@@ -1,20 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Rubik+Broken+Fax&display=swap');
 
-p {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#text {
   font-family: "Rubik Broken Fax", system-ui;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   line-height: 14px;
-  background: url("https://4.bp.blogspot.com/-b-gD6n84MyM/Tlvc8CYawrI/AAAAAAAADG4/A2Bmg5bKaBo/s1600/Rick%2BRoss%2BKreayshawn%2BConfrontation%2BMTV%2BVMA%2B2011%2BPiKaHsSo.jpg");
+  background: url("https://plus.unsplash.com/premium_photo-1682095757120-c9abb908ed60?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-attachment: fixed;
   background-repeat: no-repeat;
+ white-space: normal;
+  word-spacing: -0.25em; /* maakt spaties visueel dicht */
+  letter-spacing: 0em;
+
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   background-size: 70vh;
   background-position: center;
+animation: flicker 3s infinite alternate ease-in-out;
 }
 
+.text-portrait {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ 
+
 body {
-  background: black;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   overflow: hidden;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; filter: brightness(1.1) contrast(1.4); }
+  50% { opacity: 0.9; filter: brightness(1.4) contrast(1.6) hue-rotate(10deg); }
 }
